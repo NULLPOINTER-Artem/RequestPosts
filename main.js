@@ -33,6 +33,9 @@ function createPostWithComments(post, comments) {
     titleElem.textContent = title;
     bodyElem.textContent = body;
 
+    titleElem.style.borderBottom = '2px solid red';
+    titleElem.style.textAlign = 'center';
+
     postsCntr.append(titleElem);
     titleElem.after(bodyElem);
 
@@ -42,10 +45,14 @@ function createPostWithComments(post, comments) {
         for(let {email, body} of comments) {
             let comment = document.createElement('p');
             comment.innerHTML = email + "</br>" + body;
+            comment.style.marginTop = '5px';
             divOfComments.append(comment);
         }
 
         bodyElem.after(divOfComments);
         bodyElem.after(commentElem);
+        divOfComments.style.marginBottom = '10px';
+        divOfComments.style.marginLeft = '10px'
+        commentElem.style.marginTop = '10px';
     }
 }
