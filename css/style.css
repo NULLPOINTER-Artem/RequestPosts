@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.container {
+    outline: 3px solid #666;
+    margin: 10px;
+    padding: 10px;
+    max-width: 200px;
+}
+
+#id {
+    display: block;
+}
+
+#request {
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    border: 0;
+    border-bottom: 2px solid #ffde23;
+    margin-top: 10px;
+}
+
+.posts {
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.posts::first-line {
+    padding-bottom: 10px;
+}
