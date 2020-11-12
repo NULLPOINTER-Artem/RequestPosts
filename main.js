@@ -28,7 +28,7 @@ function createPostWithComments(post, comments) {
     let titleElem = document.createElement('h4');
     let bodyElem = document.createElement('p');
     let commentElem = document.createElement('p');
-    const divOfComments = document.querySelector('.comments');
+    const divOfComments = document.createElement('div');
 
     titleElem.textContent = title;
     bodyElem.textContent = body;
@@ -41,10 +41,11 @@ function createPostWithComments(post, comments) {
 
         for(let {email, body} of comments) {
             let comment = document.createElement('p');
-            comment.innerHTML = email + "</br></br>" + body;
+            comment.innerHTML = email + "</br>" + body;
             divOfComments.append(comment);
         }
 
+        bodyElem.after(divOfComments);
         bodyElem.after(commentElem);
     }
 }
